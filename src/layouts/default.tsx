@@ -2,7 +2,6 @@
 /* eslint-disable padding-line-between-statements */
 /* eslint-disable react/no-unknown-property */
 
-import { Link } from "@heroui/link";
 
 import { Navbar } from "@/components/navbar";
 
