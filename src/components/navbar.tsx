@@ -115,7 +115,7 @@ export const Navbar = () => {
             className="text-sm font-normal"
             disabled={!platform.includes('WINDOWS')}
             isDisabled={!platform.includes('WINDOWS')}
-            href={platform.includes('WINDOWS') ? '/Rud1Setup-0.1.exe' : '#'}
+            href={platform.includes('WINDOWS') ? 'https://zr8cjf8g0kr80q6m.public.blob.vercel-storage.com/Rud1Setup-0.1-H2RIxf1vCEerQujwAeIIM441c8qZar.exe' : '#'}
             // startContent={<HeartFilledIcon className="text-danger" />}
             variant="shadow"
             color={platform.includes('WINDOWS') ? "secondary" : 'warning'}

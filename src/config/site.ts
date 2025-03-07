@@ -10,7 +10,7 @@ export const siteConfig = {
     },
     {
       label: "Descargar Aplicación",
-      href: "/Rud1Setup-0.1.exe",
+      href: "https://zr8cjf8g0kr80q6m.public.blob.vercel-storage.com/Rud1Setup-0.1-H2RIxf1vCEerQujwAeIIM441c8qZar.exe",
     }
   ],
   navMenuItems: [
@@ -21,7 +21,7 @@ export const siteConfig = {
     },
     {
       label: "Descargar Aplicación",
-      href: "/Rud1Setup-0.1.exe",
+      href: "https://zr8cjf8g0kr80q6m.public.blob.vercel-storage.com/Rud1Setup-0.1-H2RIxf1vCEerQujwAeIIM441c8qZar.exe",
       download: true,
     }
   ],
