@@ -1,69 +1,32 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Vite + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Rud1",
+  description: "Conexiones remotas rapidas y seguras con servicios VPN",
   navItems: [
     {
-      label: "Home",
-      href: "/",
+      label: "Panel de administración",
+      href: "https://dashboard.rud1.es",
     },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
+      label: "Descargar Aplicación",
+      href: "/Rud1Setup-0.1.exe",
+    }
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Panel de administración",
+      href: "https://dashboard.rud1.es",
+      download: false,
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
+      label: "Descargar Aplicación",
+      href: "/Rud1Setup-0.1.exe",
+      download: true,
+    }
   ],
   links: {
     github: "https://github.com/frontio-ai/heroui",
-    twitter: "https://twitter.com/hero_ui",
     docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
   },
 };

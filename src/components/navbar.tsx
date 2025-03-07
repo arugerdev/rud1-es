@@ -47,6 +47,11 @@ export const Navbar = () => {
     />
   );
 
+
+  const platform = typeof window !== 'undefined' ? navigator.userAgent.toUpperCase() : 'server';
+  console.log(platform);
+
+
   return (
     <HeroUINavbar maxWidth="xl" position="sticky" shouldHideOnScroll >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -105,6 +110,19 @@ export const Navbar = () => {
           >
             Panel de administración
           </Button>
+          <Button
+            as={Link}
+            className="text-sm font-normal"
+            disabled={!platform.includes('WINDOWS')}
+            isDisabled={!platform.includes('WINDOWS')}
+            href={platform.includes('WINDOWS') ? '/Rud1Setup-0.1.exe' : '#'}
+            // startContent={<HeartFilledIcon className="text-danger" />}
+            variant="shadow"
+            color={platform.includes('WINDOWS') ? "secondary" : 'warning'}
+            download={platform.includes('WINDOWS')}
+          >
+            {(platform.includes('ANDROID') || platform.includes('IPHONE')) ? "Nuestro cliente solo esta disponible en equipos de escritorio" : (platform.includes('MAC') || platform.includes('LINUX')) ? "Nuestro cliente solo esta disponible para sistemas Windows" : "Descargar Aplicación"}
+          </Button>
         </NavbarItem>
       </NavbarContent>
 
@@ -118,19 +136,15 @@ export const Navbar = () => {
 
       <NavbarMenu>
         {searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="mx-4 mt-2 flex flex-col items-center justify-center gap-4">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
+                color={"foreground"}
+                href={item.href}
                 size="lg"
+                download={item?.download ?? false}
+
               >
                 {item.label}
               </Link>
@@ -138,6 +152,6 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu>
-    </HeroUINavbar>
+    </HeroUINavbar >
   );
 };
